@@ -1,6 +1,6 @@
 # This script recites the lyrics to the song
 # The Twelve Days of Christmas
-# Script copyright 2020 by Jim Lawless (MIT/X11)
+# Script copyright 2020 by James K. Lawless (MIT/X11)
 # See github repo for full license info
 # https://github.com/jimlawless/TwelveDays
 
