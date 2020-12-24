@@ -1,6 +1,6 @@
 # This script recites the lyrics to the song
 # The Twelve Days of Christmas
-# Script copyright 2020 by James K. Lawless (MIT/X11)
+# Script copyright 2020 by Jim Lawless (MIT/X11)
 # See github repo for full license info
 # https://github.com/jimlawless/TwelveDays
 
@@ -21,14 +21,17 @@ $days=@(("first", "a partridge in a pear tree." ),
 )
 
 for($i=0;$i -lt 12;$i++) {
+    write("`nOn the " + $days[$i][0] + " day of Christmas, my true love gave to me")
     $speak.Speak("On the " + $days[$i][0] + " day of Christmas, my true love gave to me")
     for($j=$i;$j -ge 0;$j--) {
+        $phrase=""
         if(($j -eq 0) -and ($i -ne 0)) {
-           $speak.Speak("and " + $days[$j][1])
+           $phrase=($phrase+" and " + $days[$j][1])
         }
         else {
-            $speak.Speak($days[$j][1])
+            $phrase=($phrase+$days[$j][1])
         }
+        write ($phrase)
+        $speak.Speak($phrase)
     }
 }
-
